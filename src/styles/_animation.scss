@@ -1,0 +1,39 @@
+
+// 入场动画开始
+.zoom-in-top-enter {
+  opacity: 0;
+  transform: scaleY(0)
+}
+
+// 入场动画过程
+.zoom-in-top-enter-active {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.22, 1) 100ms;
+  transform-origin: center top;
+}
+
+// 入场动画结束
+.zoom-in-top-enter-done {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+// 离场动画过程
+.zoom-in-top-exit {
+  opacity: 1;
+}
+.zoom-in-top-exit-active {
+  opacity: 0;
+  transform: scaleY(0);
+  transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.22, 1) 100ms;
+  transform-origin: center top;
+}
+
+// Alert-离开动画
+.alert-out-exit {
+  transform: scaleY(1);
+}
+.alert-out-exit-active {
+  transform: scaleY(0);
+}

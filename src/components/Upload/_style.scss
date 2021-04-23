@@ -1,0 +1,56 @@
+.file-list {
+  font-size: $font-size-base;
+  width: 100%;
+  padding: 0;
+  .file-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: solid $border-width $border-color;
+    position: relative;
+    &:hover {
+      background-color: $gray-200;
+      .file-status {
+        display: none;
+      }
+      .file-actions {
+        .icon-close {
+          display: block;
+        }
+      }
+    }
+    .file-name {
+      .text {
+        margin-left: 10px;
+        font-style: normal;
+        font-size: $font-size-lg;
+      }
+      &.file-name-error {
+        color: $danger;
+      }
+    }
+    .file-status {
+    }
+    .file-actions {
+      position: absolute;
+      right: 8px;
+      top: 5px;
+      cursor: pointer;
+      .icon-close {
+        display: none;
+      }
+    }
+  }
+}
+
+.drag {
+  border: dashed 1px $border-color;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.drag-over {
+    border-color: $secondary;
+    background-color: $gray-900;
+  }
+}

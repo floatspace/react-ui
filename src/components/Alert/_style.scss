@@ -1,0 +1,23 @@
+.alert {
+  position: relative;
+  padding: $alert-padding-y $alert-padding-x;
+  margin: 10px 0;
+  border: solid $alert-border-width $alert-border-color;
+  border-radius: $border-radius;
+  transition: transform 0.25s ease-in-out;
+  @each $key, $val in $theme-colors {
+    &.alert-#{$key} {
+      border-color: $val;
+    }
+  }
+  .alert-close {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    cursor: pointer;
+  }
+  &.alert-hide {
+    // display: none;
+    // transform: scaleY(0);
+  }
+}
